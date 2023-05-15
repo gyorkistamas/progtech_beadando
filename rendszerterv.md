@@ -43,16 +43,18 @@ A program a legtöbb asztali operációs rendszeren elfut, tekintettel arra, hog
 ![Adatbázis terv](./database.png)
 
 ## 8. Implementációs terv
+Az alkalmazást a Java nyelv segítségével tervezzük megvalósítani. A fejlesztés során MySQL adatbázist használunk. Az implementálás során nagy figyelmet kap az OCP és SRP szabályainak betartása.
+Kettő "nagyobb" tervevzési mintát tervezünk implementálni:
+ - Observer: több bingó lap egyidejű futása esetén a többi lap értesítése, ha valamelyik nyer.
+ - Command: adatábázis kapcsolat használata során.
 
 ## 9. Tesztterv
 
-A program tesztelése elsősorban unit tesztek segítségével történik, a manuális tesztelést leszámítva.
+A program tesztelése elsősorban unit tesztek segítségével történik - a manuális tesztelése kívül -, JUnit segítségével.
 
 ## 10. Telepítési terv
 
-Fizikai telepítési terv: 
-
-Szoftver telepítési terv: 
+Az alkalmazás önmagában nem igényel telepítést, viszont szükséges hozzá valamilyen Java futtatókörnyezet telepítése, ennek a telepítésének a menete az operációs rendszertől függ.
 
 ## 11. Karbantartási terv
 
