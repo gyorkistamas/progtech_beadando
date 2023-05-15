@@ -40,6 +40,7 @@ A programhoz MySQL adatábzist szervert használunk.
 A program a legtöbb asztali operációs rendszeren elfut, tekintettel arra, hogy Java nyelven íródott, aminek sok operációs rendszeren van futtató környezete. E mellett szükséges még internet hozzáférés is a megfelelő működéshez (vagy kapcsolat az adatbázis szerverhez).
 
 ## 7. Adatbázis terv
+![Adatbázis terv](./database.png)
 
 ## 8. Implementációs terv
 
