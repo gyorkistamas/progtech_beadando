@@ -1,7 +1,6 @@
 package Register;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -12,6 +11,7 @@ public class RegisterForm {
     private JButton btnRegister;
     private JPasswordField txtFieldPassword;
     private JButton btnBackToLogin;
+    private JPasswordField txtBoxPasswordConfirm;
 
     public RegisterForm() {
         AddRegisterButtonHandler();
@@ -27,7 +27,7 @@ public class RegisterForm {
         btnRegister.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JOptionPane.showMessageDialog(mainPanel, "Test message");
+                JOptionPane.showMessageDialog(mainPanel, new String(txtFieldPassword.getPassword()));
             }
         });
     }
