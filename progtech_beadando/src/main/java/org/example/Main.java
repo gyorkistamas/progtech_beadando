@@ -1,7 +1,9 @@
 package org.example;
 
+import Register.RegisterForm;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        RegisterForm form = new RegisterForm();
     }
 }
