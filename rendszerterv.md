@@ -5,6 +5,8 @@ Az alkalmazás célja egy Bingó játék szimulálására képes alkalmazás lé
 
 ## 2. Projektterv
 
+A projekt elkészítése során a Java nyelvet használjuk. A feladat kiemelt pontja a tervezési minták használata. Ezért az adatábázis-al való kapcsolat során Command tervezési mintát fogunk használni, a legenerált bingo lapok közötti kapcsolattartáshoz.
+
 ## 3. Folyamatok modellje
 
 ## 4. Követelmények
@@ -54,14 +56,9 @@ A program tesztelése elsősorban unit tesztek segítségével történik - a ma
 
 ## 10. Telepítési terv
 
-Az alkalmazás önmagában nem igényel telepítést, viszont szükséges hozzá valamilyen Java futtatókörnyezet telepítése, ennek a telepítésének a menete az operációs rendszertől függ.
+Az alkalmazás önmagában nem igényel telepítést, viszont szükséges hozzá valamilyen Java futtatókörnyezet telepítése, ennek a telepítésének a menete az operációs rendszertől függ, ez megtalálható a Java dokumentécióban.
 
 ## 11. Karbantartási terv
 
-Fontos ellenőrizni:
-...
-
-Figyelembe kell venni a felhasználó által jött visszajelzést is a programmal kapcsolatban.
-Ha hibát talált, mielőbb orvosolni kell, lehet az:
-*	Működéssel kapcsolatos
-*	Kinézet, dizájnnal kapcsolatos
+- A projekt átadása után jelzett hibák javítása igényszerűen.
+- 6 havonta Java futtatókörnyezet frissítése és egyes komponensek frissítése ezzel együtt.
