@@ -1,1 +1,64 @@
-<mxfile host="Electron" modified="2023-05-16T11:34:42.784Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/20.8.16 Chrome/106.0.5249.199 Electron/21.4.0 Safari/537.36" etag="nIvkAF9Ua4OOFwTY0-DJ" version="20.8.16" type="device"><diagram name="1 oldal" id="d2MzIyj5QgMQAOa_S2GP">xVbbbqMwEP0aHrsKkNDmMbd2H1opUlfay5uDp+DEeCIz5Pb1a4MJUJJ2K7Xal+A5HpvxOccTvHCWHR4026ZPyEF6wYAfvHDuBYE/GA3MwyLHCokCvwISLbhLaoBncYJ6pUMLwSHvJBKiJLHtgjEqBTF1MKY17rtpLyi7b92yBHrAc8xkH/0pOKUVehfcNvh3EElav9mPxtVMxupkd5I8ZRz3LShceOFMI1I1yg4zkJa8mpdq3f2V2XNhGhT9ywK1/HFYKw1xytT8KYrYnwd+c+dqo2N9YODm/C5ETSkmqJhcNOhUY6E42F0HJmpyHhG3BvQNuAaioxOTFYQGSimTbtYUrI+/3Poy+G2Db8PRuAbmh/b0/NiOlqBFBgTagdURbN1XmXFQjoWO4Q06aocxnQC9kTc862eMD2iq0UezToNkJHbdOphzYHLOa0QyA6fTBzRz++6YLNyb7kGmLD8pbxZ6E1/axzT0gkiaM0xX2owSOhPV0tpYcmuHRSYnMaEhdLoDTcLY/5GtQC4xFyRQmZQVEmHWSphIkdgJsqK31cWCpFAwO1/IRiO7Fg5vq9Rn1S0YunvkGolf36t9cy39umuk7StZt6BPF2LYE6LHcPeu7FNB8LxlpQf3pmF2mfsEkoLB+ywFF1mKvoqlUY+lpcZEs6xHljk2dRnJSePGWElab84VKtt/XoSUryDmzBgbmkBfcGkmOC+b1yUJuiJ9hgp376sQXRAh/CoNbnsa3JjQ9onxZG1G66pzUPkYb+x2ipfBvML8nPX7SXePDE7ebOSNffs3C3JneDaMm8Oc7A9ntKp2Ool8dWWzhQaeVTWoI2zKTROCjVCushy+wDQSXuj/WyZ8ZZlo1G9vlzxz+3HPmLD57CjnWh9v4eIv</diagram></mxfile>
+<mxfile host="Electron" modified="2023-05-16T18:06:17.225Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="gTlSTjQuAj_LAaj1QujJ" version="21.2.8" type="device">
+  <diagram name="1 oldal" id="d2MzIyj5QgMQAOa_S2GP">
+    <mxGraphModel dx="1050" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7ROK8lLIlof5g8sGapEx-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nPTxjnrechanDM66aZGd-1" target="7ROK8lLIlof5g8sGapEx-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nPTxjnrechanDM66aZGd-1" target="7ROK8lLIlof5g8sGapEx-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.64;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="nPTxjnrechanDM66aZGd-1" target="7ROK8lLIlof5g8sGapEx-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nPTxjnrechanDM66aZGd-1" value="Felhasználó&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="120" width="110" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.027;entryY=0.38;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="7ROK8lLIlof5g8sGapEx-1" target="7ROK8lLIlof5g8sGapEx-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-1" value="Bingó játék indítása" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7ROK8lLIlof5g8sGapEx-2" target="7ROK8lLIlof5g8sGapEx-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-2" value="Bingó lapok mennyiségének kiválasztása" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="7ROK8lLIlof5g8sGapEx-3" target="7ROK8lLIlof5g8sGapEx-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-3" value="Játék&amp;nbsp; kezdete" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-7" value="Eredmény elmentése" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-9" value="Nyerés" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7ROK8lLIlof5g8sGapEx-10" target="7ROK8lLIlof5g8sGapEx-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-10" value="Eredmények megtekintése" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-11" value="Eredmények kilistázása" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="7ROK8lLIlof5g8sGapEx-14" target="7ROK8lLIlof5g8sGapEx-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-14" value="Új mező hozzáadása az adatbázishoz" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7ROK8lLIlof5g8sGapEx-16" value="A mező generálható a bingó lapokra" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -9,6 +9,8 @@ A projekt elkészítése során a Java nyelvet használjuk. A feladat kiemelt po
 
 ## 3. Folyamatok modellje
 
+![Folyamatok modellje](./folyamatok.png)
+
 ## 4. Követelmények
 
 ### Funkcionális követelmények
