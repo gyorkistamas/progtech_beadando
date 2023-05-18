@@ -1,7 +1,12 @@
 package org.example;
 
+import LandingPage.LandingPage;
+import org.apache.log4j.Logger;
+
 public class Main {
+    private static Logger logger = Logger.getLogger("Main logger");
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        LandingPage form = new LandingPage();
+        logger.info("Landing page shown");
     }
 }
