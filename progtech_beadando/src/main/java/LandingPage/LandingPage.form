@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="LandingPage.LandingPage">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="5" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="30" left="60" bottom="30" right="60"/>
+    <constraints>
+      <xy x="20" y="20" width="713" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="50987" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Üdvözlünk az alkalmazásban, kérlek válassz opciót!"/>
+        </properties>
+      </component>
+      <hspacer id="be970">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="1c40a" class="javax.swing.JButton" binding="btnNewGame">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Új játék indítása a megadott bingólapok számával"/>
+        </properties>
+      </component>
+      <component id="10b57" class="javax.swing.JTextField" binding="txtNumberOfBoards">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <toolTipText value="Generálandó lapok száma"/>
+        </properties>
+      </component>
+      <hspacer id="788e1">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="3d260" class="javax.swing.JButton" binding="btnShowResults">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Eredmények megtekintése"/>
+        </properties>
+      </component>
+      <component id="fc8fe" class="javax.swing.JButton" binding="btnNewBingoField">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Új bingó mező rögzítése az adatbázisban"/>
+        </properties>
+      </component>
+      <vspacer id="ca593">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="50"/>
+          </grid>
+        </constraints>
+      </vspacer>
+      <vspacer id="d434f">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="25"/>
+          </grid>
+        </constraints>
+      </vspacer>
+    </children>
+  </grid>
+</form>
