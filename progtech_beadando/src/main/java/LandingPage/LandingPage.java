@@ -1,11 +1,14 @@
 package LandingPage;
 
+import org.apache.log4j.Logger;
+
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class LandingPage {
 
+    private static Logger logger = Logger.getLogger("Landing page logger");
     private JPanel mainPanel;
     private JButton btnNewGame;
     private JTextField txtNumberOfBoards;
@@ -21,6 +24,7 @@ public class LandingPage {
     }
 
     private JFrame CreateFrame() {
+        logger.info("Created Landing page frame");
         return new JFrame();
     }
 
@@ -29,27 +33,33 @@ public class LandingPage {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+        logger.info("Landing page frame configured");
     }
 
     private void RegisterListeners() {
         btnNewGame.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                logger.info("New game button clicked");
                 JOptionPane.showMessageDialog(mainPanel, "New game placeholder");
             }
         });
         btnShowResults.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                logger.info("Result button clicked");
                 JOptionPane.showMessageDialog(mainPanel, "Result placeholder");
             }
         });
         btnNewBingoField.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                logger.info("New field button clicked");
                 JOptionPane.showMessageDialog(mainPanel, "New field placeholder");
             }
         });
+
+        logger.info("Landing page event listeners registered");
     }
 
 }
