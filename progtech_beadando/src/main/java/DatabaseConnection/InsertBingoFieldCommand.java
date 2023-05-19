@@ -35,7 +35,7 @@ public class InsertBingoFieldCommand implements Command {
 
         }
         catch (Exception e) {
-            logger.warn(e.getMessage());
+            logger.error(e.getMessage());
         }
 
     }

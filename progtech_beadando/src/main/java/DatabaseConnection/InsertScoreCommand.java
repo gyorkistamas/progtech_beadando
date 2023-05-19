@@ -21,7 +21,7 @@ public class InsertScoreCommand implements Command {
             logger.info(this.username + " inserted into database!");
         }
         catch (Exception e) {
-            logger.warn(e.getMessage());
+            logger.error(e.getMessage());
         }
 
     }
