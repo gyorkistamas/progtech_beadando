@@ -8,9 +8,8 @@ import java.sql.DriverManager;
 
 public class DatabaseConnection {
     private static Logger logger = Logger.getLogger("Database Connection logger");
+    private JFrame frame = new JFrame();
     private Connection dbConnection;
-
-    private JPanel mainPanel;
 
     public DatabaseConnection(String url, String username, String password) {
 
@@ -23,19 +22,21 @@ public class DatabaseConnection {
         catch (Exception e) {
 
             connection = null;
-            logger.warn(e.getMessage());
-            System.exit(0);
+            logger.error(e.getMessage());
 
+            JOptionPane.showMessageDialog(frame, e.getMessage(), "Database connection error!", JOptionPane.ERROR_MESSAGE);
         }
 
         this.setDbConnection(connection);
     }
 
     public Connection getDbConnection() {
+
         return dbConnection;
     }
 
     public void setDbConnection(Connection dbConnection) {
+
         this.dbConnection = dbConnection;
     }
 
