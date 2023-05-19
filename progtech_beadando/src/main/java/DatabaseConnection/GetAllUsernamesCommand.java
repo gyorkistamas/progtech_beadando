@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 public class GetAllUsernamesCommand implements Command {
 
-    private Logger logger = Logger.getLogger("Get all usernames logger");
+    private static Logger logger = Logger.getLogger("Get all usernames logger");
 
-    private JFrame frame = new JFrame();
+    private static JFrame frame = new JFrame();
 
     private DatabaseConnection databaseConnection;
 

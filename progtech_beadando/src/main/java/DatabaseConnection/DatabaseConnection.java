@@ -8,7 +8,7 @@ import java.sql.DriverManager;
 
 public class DatabaseConnection {
     private static Logger logger = Logger.getLogger("Database Connection logger");
-    private JFrame frame = new JFrame();
+    private static JFrame frame = new JFrame();
     private Connection dbConnection;
 
     public DatabaseConnection(String url, String username, String password) {

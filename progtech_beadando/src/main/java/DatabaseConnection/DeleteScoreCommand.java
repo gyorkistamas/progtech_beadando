@@ -6,9 +6,9 @@ import javax.swing.*;
 
 public class DeleteScoreCommand implements Command{
 
-    private Logger logger = Logger.getLogger("Delete score logger");
+    private static Logger logger = Logger.getLogger("Delete score logger");
 
-    private JFrame frame = new JFrame();
+    private static JFrame frame = new JFrame();
 
     private int id;
     private DatabaseConnection databaseConnection;

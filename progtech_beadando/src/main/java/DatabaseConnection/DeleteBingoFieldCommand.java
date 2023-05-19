@@ -3,13 +3,12 @@ package DatabaseConnection;
 import org.apache.log4j.Logger;
 
 import javax.swing.*;
-import java.util.concurrent.ExecutionException;
 
 public class DeleteBingoFieldCommand implements Command{
 
-    private Logger logger = Logger.getLogger("Delete bingo field logger");
+    private static Logger logger = Logger.getLogger("Delete bingo field logger");
 
-    private JFrame frame = new JFrame();
+    private static JFrame frame = new JFrame();
 
     private int id;
     private DatabaseConnection databaseConnection;
