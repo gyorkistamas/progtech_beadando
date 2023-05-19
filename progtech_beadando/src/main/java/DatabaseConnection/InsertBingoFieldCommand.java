@@ -2,9 +2,14 @@ package DatabaseConnection;
 
 import org.apache.log4j.Logger;
 
+import javax.swing.*;
+
 public class InsertBingoFieldCommand implements Command {
 
-    private Logger logger = Logger.getLogger("Insert bingo field logger");
+    private static Logger logger = Logger.getLogger("Insert bingo field logger");
+
+    private static JFrame frame = new JFrame();
+
     private String fieldText;
     private String username;
     private DatabaseConnection databaseConnection;
@@ -36,6 +41,7 @@ public class InsertBingoFieldCommand implements Command {
         }
         catch (Exception e) {
             logger.error(e.getMessage());
+            JOptionPane.showMessageDialog(frame, e.getMessage(), "Insert bingo field error!", JOptionPane.ERROR_MESSAGE);
         }
 
     }
