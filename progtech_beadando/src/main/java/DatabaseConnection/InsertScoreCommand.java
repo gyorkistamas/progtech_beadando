@@ -2,9 +2,14 @@ package DatabaseConnection;
 
 import org.apache.log4j.Logger;
 
+import javax.swing.*;
+
 public class InsertScoreCommand implements Command {
 
-    private Logger logger = Logger.getLogger("Insert score logger");
+    private static Logger logger = Logger.getLogger("Insert score logger");
+
+    private static JFrame frame = new JFrame();
+
     private String username;
     private DatabaseConnection databaseConnection;
 
@@ -21,7 +26,8 @@ public class InsertScoreCommand implements Command {
             logger.info(this.username + " inserted into database!");
         }
         catch (Exception e) {
-            logger.warn(e.getMessage());
+            logger.error(e.getMessage());
+            JOptionPane.showMessageDialog(frame, e.getMessage(), "Insert score error!", JOptionPane.ERROR_MESSAGE);
         }
 
     }

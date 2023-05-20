@@ -2,9 +2,14 @@ package DatabaseConnection;
 
 import org.apache.log4j.Logger;
 
+import javax.swing.*;
+
 public class DeleteScoreCommand implements Command{
 
-    private Logger logger = Logger.getLogger("Delete score logger");
+    private static Logger logger = Logger.getLogger("Delete score logger");
+
+    private static JFrame frame = new JFrame();
+
     private int id;
     private DatabaseConnection databaseConnection;
 
@@ -20,14 +25,16 @@ public class DeleteScoreCommand implements Command{
             int statusNumber = this.databaseConnection.getDbConnection().createStatement().executeUpdate("delete from score where id = '"+ this.id +"'");
 
             if (statusNumber == 0) {
-                logger.info("Row with id: "+ this.id +" does not exist in the table.");
+                logger.warn("Row with id: "+ this.id +" does not exist in the table.");
+                JOptionPane.showMessageDialog(frame, "Row with id: "+ this.id +" does not exist in the table.", "Delete score warning!", JOptionPane.WARNING_MESSAGE);
             }
             else {
                 logger.info("Delete succeeded!");
             }
         }
         catch (Exception e) {
-            logger.warn(e.getMessage());
+            logger.error(e.getMessage());
+            JOptionPane.showMessageDialog(frame, e.getMessage(), "Delete score error!", JOptionPane.ERROR_MESSAGE);
         }
 
     }

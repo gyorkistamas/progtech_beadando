@@ -2,16 +2,29 @@ package DatabaseConnection;
 
 import org.apache.log4j.Logger;
 
+import javax.swing.*;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class GetAllUsernamesCommand implements Command {
 
-    private Logger logger = Logger.getLogger("Get all usernames logger");
+    private static Logger logger = Logger.getLogger("Get all usernames logger");
+
+    private static JFrame frame = new JFrame();
+
     private DatabaseConnection databaseConnection;
+
     private ResultSet results;
+
+    private ArrayList<String> listOfUsernames;
 
     public GetAllUsernamesCommand(DatabaseConnection databaseConnection) {
         this.databaseConnection = databaseConnection;
+        listOfUsernames = new ArrayList<String>();
+    }
+
+    public ArrayList<String> getListOfUsernames() {
+        return listOfUsernames;
     }
 
     @Override
@@ -20,21 +33,15 @@ public class GetAllUsernamesCommand implements Command {
 
             this.results = this.databaseConnection.getDbConnection().createStatement().executeQuery("select username from score");
 
-            try
-            {
-                while (this.results.next()) {
-                    System.out.println(this.results.getString("username"));
-                }
-                logger.info("Query succeeded!");
+            while (this.results.next()) {
+                listOfUsernames.add(this.results.getString("username"));
             }
-            catch (Exception e) {
-                logger.warn(e.getMessage());
-            }
+            logger.info("Query succeeded!");
         }
         catch (Exception e) {
+            logger.error(e.getMessage());
 
-            logger.warn(e.getMessage());
-
+            JOptionPane.showMessageDialog(frame, e.getMessage(), "Get all username error!", JOptionPane.ERROR_MESSAGE);
         }
     }
 
