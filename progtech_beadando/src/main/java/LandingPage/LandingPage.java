@@ -1,5 +1,8 @@
 package LandingPage;
 
+import BingoGame.GameStarter;
+import DatabaseConnection.DatabaseConnection;
+import DatabaseConnection.GetAllBingoFieldsCommand;
 import org.apache.log4j.Logger;
 
 import javax.swing.*;
@@ -41,7 +44,7 @@ public class LandingPage {
             @Override
             public void mouseClicked(MouseEvent e) {
                 logger.info("New game button clicked");
-                JOptionPane.showMessageDialog(mainPanel, "New game placeholder");
+                StartGame();
             }
         });
         btnShowResults.addMouseListener(new MouseAdapter() {
@@ -60,6 +63,48 @@ public class LandingPage {
         });
 
         logger.info("Landing page event listeners registered");
+    }
+
+    private void StartGame() {
+        int numberOfTables = 0;
+
+        try {
+            numberOfTables = Integer.parseInt(txtNumberOfBoards.getText());
+        }
+        catch (Exception e) {
+            logger.error("Not a number provided");
+            JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Számot adjon meg!",
+                    "Hiba",
+                    JOptionPane.ERROR_MESSAGE);
+
+            return;
+        }
+
+        if(numberOfTables < 1 || numberOfTables > 10) {
+            logger.error("Bad table number provided");
+            JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "Kérjük, 1 és 10 közötti számot adjon meg!");
+            return;
+        }
+
+        GetAllBingoFieldsCommand com = new GetAllBingoFieldsCommand(
+                new DatabaseConnection("jdbc:mysql://localhost:3306/progtech",
+                                  "main",
+                        "password"
+        ));
+
+        com.execute();
+
+        if (com.getListOfBingoFieldTexts().size() < 25) {
+            logger.error("Not enough fields to generate table");
+            JOptionPane.showMessageDialog(JOptionPane.getRootFrame(),
+                    "Az adatbázis nem tartalmaz elég elemet egy tábla létrehozásához!",
+                    "Hiba", JOptionPane.ERROR_MESSAGE);
+
+            return;
+        }
+
+        logger.info("Game starting.");
+        GameStarter game = new GameStarter(numberOfTables);
     }
 
 }
