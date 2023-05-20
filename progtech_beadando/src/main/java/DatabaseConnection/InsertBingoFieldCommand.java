@@ -32,16 +32,18 @@ public class InsertBingoFieldCommand implements Command {
             if (this.username == null) {
                 this.databaseConnection.getDbConnection().createStatement().executeUpdate("insert into bingo_fields (field_text) values ('"+ this.fieldText +"')");
                 logger.info(this.fieldText + " inserted into database!");
+                JOptionPane.showMessageDialog(frame, this.fieldText + " beszúrásra került az adatbázisba!", "Információ", JOptionPane.INFORMATION_MESSAGE);
             }
             else {
                 this.databaseConnection.getDbConnection().createStatement().executeUpdate("insert into bingo_fields (field_text, uploaded_by) values ('"+ this.fieldText +"', '"+ this.username +"')");
                 logger.info(this.fieldText + " inserted into database by: "+ this.username +"!");
+                JOptionPane.showMessageDialog(frame, this.fieldText + " beszúrásra került az adatbázisba "+ this.username +" által!", "Információ", JOptionPane.INFORMATION_MESSAGE);
             }
 
         }
         catch (Exception e) {
             logger.error(e.getMessage());
-            JOptionPane.showMessageDialog(frame, e.getMessage(), "Insert bingo field error!", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frame, e.getMessage(), "Adatbázisbeli hiba lépett fel a bingó mező beszúrásakor!", JOptionPane.ERROR_MESSAGE);
         }
 
     }

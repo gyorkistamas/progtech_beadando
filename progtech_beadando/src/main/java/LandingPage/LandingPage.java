@@ -1,5 +1,6 @@
 package LandingPage;
 
+import AddNewBingoField.AddNewBingoField;
 import BingoGame.GameStarter;
 import DatabaseConnection.DatabaseConnection;
 import DatabaseConnection.GetAllBingoFieldsCommand;
@@ -58,7 +59,11 @@ public class LandingPage {
             @Override
             public void mouseClicked(MouseEvent e) {
                 logger.info("New field button clicked");
-                JOptionPane.showMessageDialog(mainPanel, "New field placeholder");
+                AddNewBingoField aNBF = new AddNewBingoField(new DatabaseConnection(
+                        "jdbc:mysql://localhost:3306/progtech",
+                        "main",
+                        "password"
+                ));
             }
         });
 
@@ -88,7 +93,7 @@ public class LandingPage {
 
         GetAllBingoFieldsCommand com = new GetAllBingoFieldsCommand(
                 new DatabaseConnection("jdbc:mysql://localhost:3306/progtech",
-                                  "main",
+                        "main",
                         "password"
         ));
 

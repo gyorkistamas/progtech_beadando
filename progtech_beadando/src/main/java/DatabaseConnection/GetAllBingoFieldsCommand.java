@@ -43,7 +43,7 @@ public class GetAllBingoFieldsCommand implements Command{
         catch (Exception e) {
             logger.error(e.getMessage());
 
-            JOptionPane.showMessageDialog(frame, e.getMessage(), "Get all bingo fields error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frame, e.getMessage(), "Adatbázisbeli hiba történt a bingo mező értékeinek lekérdezésekor!", JOptionPane.ERROR_MESSAGE);
         }
 
     }
