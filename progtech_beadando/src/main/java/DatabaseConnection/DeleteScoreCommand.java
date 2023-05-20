@@ -26,7 +26,7 @@ public class DeleteScoreCommand implements Command{
 
             if (statusNumber == 0) {
                 logger.warn("Row with id: "+ this.id +" does not exist in the table.");
-                JOptionPane.showMessageDialog(frame, "Row with id: "+ this.id +" does not exist in the table.", "Delete score warning!", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(frame, this.id + "értékű ID-val ellátott sor nem létezik!", "Hiba pontszám törléskor!", JOptionPane.WARNING_MESSAGE);
             }
             else {
                 logger.info("Delete succeeded!");
@@ -34,7 +34,7 @@ public class DeleteScoreCommand implements Command{
         }
         catch (Exception e) {
             logger.error(e.getMessage());
-            JOptionPane.showMessageDialog(frame, e.getMessage(), "Delete score error!", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frame, e.getMessage(), "Adatbázisbeli hiba lépett fel a pontszám törlésekor!", JOptionPane.ERROR_MESSAGE);
         }
 
     }

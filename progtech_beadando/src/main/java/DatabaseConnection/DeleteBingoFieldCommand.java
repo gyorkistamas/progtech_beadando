@@ -26,7 +26,7 @@ public class DeleteBingoFieldCommand implements Command{
 
             if (statusNumber == 0) {
                 logger.warn("Row with id:"+ this.id +" does not exist in the table.");
-                JOptionPane.showMessageDialog(frame, "Row with id:"+ this.id +" does not exist in the table.", "Delete bingo field warning!" , JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(frame, this.id + "értékű ID-val ellátott sor nem létezik!", "Hiba a bingo mező törlésekor!" , JOptionPane.WARNING_MESSAGE);
             }
             else {
                 logger.info("Delete succeeded!");
@@ -36,7 +36,7 @@ public class DeleteBingoFieldCommand implements Command{
         }
         catch (Exception e) {
             logger.error(e.getMessage());
-            JOptionPane.showMessageDialog(frame, e.getMessage(), "Delete bingo field error!", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frame, e.getMessage(), "Adatbázisbeli hiba lépett fel a bingo mező törlésekor!", JOptionPane.ERROR_MESSAGE);
         }
 
     }

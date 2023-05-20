@@ -23,11 +23,11 @@ public class InsertScoreCommand implements Command {
 
         try {
             this.databaseConnection.getDbConnection().createStatement().executeUpdate("insert into score (username) values ('"+this.username+"')");
-            logger.info(this.username + " inserted into database!");
+            logger.info(this.username + " beszúrásra került az adatbázisba!");
         }
         catch (Exception e) {
             logger.error(e.getMessage());
-            JOptionPane.showMessageDialog(frame, e.getMessage(), "Insert score error!", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frame, e.getMessage(), "Adatbázisbeli hiba lépett fel az eredmény beszúrásakor!", JOptionPane.ERROR_MESSAGE);
         }
 
     }

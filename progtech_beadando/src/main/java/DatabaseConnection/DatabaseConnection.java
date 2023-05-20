@@ -24,7 +24,8 @@ public class DatabaseConnection {
             connection = null;
             logger.error(e.getMessage());
 
-            JOptionPane.showMessageDialog(frame, e.getMessage(), "Database connection error!", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(frame, e.getMessage(), "Adatbázis csatlakozási hiba!", JOptionPane.ERROR_MESSAGE);
+            System.exit(0);
         }
 
         this.setDbConnection(connection);
