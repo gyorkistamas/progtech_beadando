@@ -59,7 +59,6 @@ public class LandingPage {
             @Override
             public void mouseClicked(MouseEvent e) {
                 logger.info("New field button clicked");
-//                JOptionPane.showMessageDialog(mainPanel, "New field placeholder");
                 AddNewBingoField aNBF = new AddNewBingoField(new DatabaseConnection(
                         "jdbc:mysql://localhost:3306/progtech",
                         "main",
