@@ -14,7 +14,7 @@ import java.util.Random;
 public class BingoObserver implements Observer {
     private static Logger logger = Logger.getLogger("Bingo observer logger");
 
-    private ArrayList<BingoTable> tables = new ArrayList<>();
+    public ArrayList<BingoTable> tables = new ArrayList<>();
 
     private ArrayList<String> pickedFields = new ArrayList<>();
 
@@ -30,6 +30,11 @@ public class BingoObserver implements Observer {
     public void AddTable(BingoTable table) {
         tables.add(table);
     }
+
+    public BingoObserver() {
+
+    }
+
 
     public BingoObserver(GetAllBingoFieldsCommand bingoFieldsCommand) {
         getPossibleFields(bingoFieldsCommand);
@@ -59,7 +64,7 @@ public class BingoObserver implements Observer {
     }
 
     private void generation() {
-        for (int i = 5; i >= 5; i--) {
+        for (int i = 10; i >= 0; i--) {
             timeUntilNextRoll.setText(String.valueOf(i));
             try {
                 Thread.sleep(1000);
@@ -170,11 +175,18 @@ public class BingoObserver implements Observer {
 
     public Boolean hasColumnFullOfTrue(Boolean[][] table) {
         for (int i = 0; i < table.length; i++) {
-            if (!table[i][0]) {
-                return false;
+            boolean columnIsFullOfTrue = true;
+            for (int j = 0; j < table[0].length; j++) {
+                if (!table[j][i]) {
+                    columnIsFullOfTrue = false;
+                    break;
+                }
+            }
+            if (columnIsFullOfTrue) {
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     public Boolean hasDiagonalFullOfTrue(Boolean[][] table) {

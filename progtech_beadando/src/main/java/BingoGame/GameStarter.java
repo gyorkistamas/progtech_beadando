@@ -16,7 +16,7 @@ public class GameStarter {
         game.startGame();
     }
 
-    private void CreateTables(BingoObserver gameObserver) {
+    public void CreateTables(BingoObserver gameObserver) {
 
         for (int i = 0; i < numberOfBoards; i++) {
             BingoTable table = CreateTable();
@@ -26,7 +26,7 @@ public class GameStarter {
         logger.info("Created " + this.numberOfBoards + " bingo tables");
     }
 
-    private BingoTable CreateTable() {
+    public BingoTable CreateTable() {
         logger.info("Creating Bingo Table");
         return new BingoTable(new GetAllBingoFieldsCommand(
                                 new DatabaseConnection("jdbc:mysql://localhost:3306/progtech",
@@ -35,7 +35,7 @@ public class GameStarter {
         )));
     }
 
-    private BingoObserver CreateObserver() {
+    public BingoObserver CreateObserver() {
         logger.info("Creating BingoObserver");
         return new BingoObserver(new GetAllBingoFieldsCommand(
                                     new DatabaseConnection("jdbc:mysql://localhost:3306/progtech",
