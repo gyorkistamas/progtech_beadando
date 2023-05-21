@@ -57,7 +57,7 @@ class DeleteScoreCommandTest {
         catch (Exception ignored) {
 
         }
-
+        
         Assertions.assertEquals(countBeforeDeletion - 1, countAfterDeletion);
 
     }
