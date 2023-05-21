@@ -146,7 +146,7 @@ public class BingoObserver implements Observer {
         generatorThread.stop();
     }
 
-    private Boolean isWinning(BingoTable table) {
+    public Boolean isWinning(BingoTable table) {
         return  hasRowFullOfTrue(table.isClickedMatrix)    ||
                 hasColumnFullOfTrue(table.isClickedMatrix) ||
                 hasDiagonalFullOfTrue(table.isClickedMatrix);
