@@ -43,7 +43,7 @@
           <text value="Újratölt"/>
         </properties>
       </component>
-      <component id="59c91" class="javax.swing.JButton" binding="btnClear">
+      <component id="59c91" class="javax.swing.JButton" binding="btnWipe">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>

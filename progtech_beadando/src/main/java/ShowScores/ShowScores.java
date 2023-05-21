@@ -3,6 +3,8 @@ package ShowScores;
 
 import DatabaseConnection.DatabaseConnection;
 import DatabaseConnection.GetAllScoresCommand;
+import DatabaseConnection.GetAllUsernamesCommand;
+import DatabaseConnection.DeleteAllScoresCommand;
 import org.apache.log4j.Logger;
 
 import javax.swing.*;
@@ -19,7 +21,7 @@ public class ShowScores {
     private JScrollPane scrollPane;
     private JTable tableScores;
     private JButton btnRefresh;
-    private JButton btnClear;
+    private JButton btnWipe;
     private JButton btnCancel;
     private JFrame frame;
     private DatabaseConnection databaseConnection;
@@ -53,10 +55,10 @@ public class ShowScores {
             }
         });
 
-        btnClear.addMouseListener(new MouseAdapter() {
+        btnWipe.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ClearTable();
+                WipeTable();
             }
         });
 
@@ -80,8 +82,8 @@ public class ShowScores {
 
         DefaultTableModel model = new DefaultTableModel();
 
-        model.addColumn("Username");
-        model.addColumn("Time_Of_Win");
+        model.addColumn("Játékos");
+        model.addColumn("Pontszerzés ideje");
 
 //        this.tableScores.setModel(model);
 
@@ -119,6 +121,33 @@ public class ShowScores {
 
     }
 
+    private void WipeTable() {
+
+
+        GetAllUsernamesCommand getAllUsernames = new GetAllUsernamesCommand(
+                this.databaseConnection
+        );
+        getAllUsernames.execute();
+
+        if (getAllUsernames.getListOfUsernames().size() < 1) {
+            logger.info("Scores table is already empty!");
+            JOptionPane.showMessageDialog(frame, "Pontszám tábla már űres!", "Információ", JOptionPane.INFORMATION_MESSAGE);
+        }
+        else {
+            DeleteAllScoresCommand deleteAllScores = new DeleteAllScoresCommand(
+                    this.databaseConnection
+            );
+            deleteAllScores.execute();
+            logger.info("Scores table wiped out!");
+            RefreshTable();
+        }
+
+
+
+
+
+
+    }
 
     private void ClearTable() {
         this.tableScores.setModel(new DefaultTableModel());
