@@ -4,6 +4,7 @@ import AddNewBingoField.AddNewBingoField;
 import BingoGame.GameStarter;
 import DatabaseConnection.DatabaseConnection;
 import DatabaseConnection.GetAllBingoFieldsCommand;
+import ShowScores.ShowScores;
 import org.apache.log4j.Logger;
 
 import javax.swing.*;
@@ -52,7 +53,13 @@ public class LandingPage {
             @Override
             public void mouseClicked(MouseEvent e) {
                 logger.info("Result button clicked");
-                JOptionPane.showMessageDialog(mainPanel, "Result placeholder");
+                ShowScores sCs = new ShowScores(
+                    new DatabaseConnection(
+                            "jdbc:mysql://localhost:3306/progtech",
+                            "main",
+                            "password"
+                    )
+                );
             }
         });
         btnNewBingoField.addMouseListener(new MouseAdapter() {
